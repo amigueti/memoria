@@ -1,0 +1,338 @@
+\documentclass[slidesec, a4, notes]{seminar}
+
+\usepackage[spanish]{babel}
+\usepackage[latin1]{inputenc}
+%\usepackage{times}
+\usepackage[dvipdfm]{graphicx}
+
+\usepackage{t-gsyc-6}  %% Plantilla GSYC
+
+
+\title{Herramientas de recogida de información
+  sobre proyectos de software libre}
+\date{Febrero 2005}
+\author{Diego Jiménez Jiménez}
+\cop{2005 GSyC}
+\address{djimenez@gsyc.escet.urjc.es}
+
+
+\definecolor{darkred}{rgb}  {1.0, 0.0, 0.0}
+
+
+% for resalted text
+\newcommand{\res}[1]{\textcolor{darkred}{#1}}
+% for different text
+\newcommand{\dif}{\textsl}
+% for reserved words
+\newcommand{\rw}[1]{\textrm{\textbf{#1}}}
+% for commands
+\newcommand{\com}[1]{\textrm{\textbf{#1}}}
+
+
+%\twoup  %% Dos transparencias por página
+
+
+\begin{document}
+
+%-----------------------%
+
+\maketitle
+
+%-----------------------%
+
+\begin{hslide}
+  \slsect{Visión global}
+  
+  \begin{itemize}
+  \item Disponemos de \res{información pública} sobre el desarrollo de proyectos
+    de software libre.
+  \item Por qué no aprovecharla para estudiar y conocer más acerca del proceso
+    de desarrollo del software libre.
+  \item Centrémonos en crear herramientas que, basadas en una interfaz común,
+    extraigan datos de interés de las distintas fuentes de información accesibles \ldots
+  \item \ldots y almacenen de forma estructurada los resultados para que puedan
+    ser examinados en un futuro.
+  \end{itemize}
+  
+\end{hslide}
+
+%-----------------------%
+
+\begin{hslide}
+  \slsect{¿Por qué se publica esta información?}
+  
+  \begin{itemize}
+  \item Proyectos de software libre siguen modelo de desarrollo del bazar:
+    
+    \begin{itemize}
+    \item No existe autoridad máxima.
+    \item Roles de participantes dinámicos.
+    \item Usuarios se implican de forma activa.
+    \item \res{Abierto a} la incorporación de \res{nuevos integrantes}
+      al equipo de desarrollo, adaptados con facilidad gracias a la
+      disponibilidad pública de la información generada por el proyecto.
+    \end{itemize}
+    
+  \item La política de disponibilidad permite acceder a (y posteriormente
+    realizar un análisis) ingentes cantidades de información relacionada con
+    el proceso de desarrollo: participantes, \ldots
+  \end{itemize}
+  
+\end{hslide}
+
+%-----------------------%
+
+\begin{hslide}
+  \slsect{Análisis de la información disponible}
+  
+  \slsubsect{Objetivos}
+  
+  \begin{itemize}
+  \item Potenciar áreas de la ingeniería del software tradicional.
+  \item Estudio de la evolución del software libre sirve de base de conocimiento
+    para evaluar la salud del proyecto, facilitar la toma de decisiones y
+    pronosticar complicaciones actuales y futuras.
+  \item Analizar modelos que permitan entender el proceso de desarrollo de
+    software libre: interacciones \ldots
+  \end{itemize}
+  
+\end{hslide}
+
+%-----------------------%
+
+\begin{hslide}
+  \slsubsect{Fases del análisis}
+  
+  \begin{enumerate}
+  \item Recopilación de cualquier tipo de datos cuantificables desde
+    flujos de información, código fuente, herramientas de desarrollo
+    distribuido, etc. \\
+    Deben ser almacenados en un formato intermedio e independiente de
+    todas las fuentes y herramientas implicadas en ambas fases.
+  \item Análisis, procesamiento e interpretación de los resultados obtenidos
+    en la fase anterior.
+  \end{enumerate}
+  
+\end{hslide}
+
+%-----------------------%
+
+\begin{hslide}
+  \slsubsect{Factor clave: automatización}
+  
+  \begin{itemize}
+  \item Tanto en recogida de datos como en posterior análisis cuantitativo.
+  \item En el pasado: desarrollo de metodologías automatizadas, aunque
+    limitadas a un proyecto concreto.
+  \item En la actualidad: esfuerzos centrados en crear una infraestructura
+    de análisis que integre varias herramientas (que pretenden ser genéricas)
+    capaces de automatizar el proceso al máximo.
+
+    Ventajas :
+    \begin{itemize}
+    \item Único esfuerzo en creación de herramientas para analizar un proyecto,
+      adaptarlas a otros supone coste mínimo.
+    \item Analizar un proyecto con distintas herramientas proporciona una mayor
+      perspectiva sobre el conjunto.
+    \end{itemize}
+    
+  \end{itemize}
+  
+\end{hslide}
+
+%-----------------------%
+
+\begin{hslide}
+  \slsect{Trabajo realizado}
+  \begin{center}
+    Limitado a la primera de las etapas del análisis.
+  \end{center}
+
+  \vspace{.4cm}
+
+  \slsubsect{Parser básico}
+
+  \begin{itemize}
+  \item Extrae parámetros de interés a partir de un texto, que posteriormente
+    almacena. Potencialmente de cualquier documento, en realidad de ninguno.
+  \item Define interfaz unificada para herramientas futuras.
+  \item Totalmente genérico. NO métodos específicos para obtener o almacenar
+    cada tipo de dato.
+  \item \res{Facilidad de extensión} a nuevas fuentes. Necesario adaptar
+    implementación en función del modo de presentación.
+  \end{itemize}
+
+\end{hslide}
+
+%-----------------------%
+
+\begin{hslide}
+  \slsubsect{Funcionamiento del parser}
+  
+  \begin{enumerate}
+  \item Obtención periódica de documentos.
+  \item Procesamiento (extracción de datos).
+    
+    \begin{itemize}
+    \item Conjunto de patrones predefinidos.
+      
+      \begin{itemize}
+      \item Delimitan fragmentos.
+      \item Reconocen contexto del dato.
+      \end{itemize}
+      
+    \item Selección de fragmentos.
+    \item Comparación de patrones y obtención de datos.
+    \end{itemize}
+    
+  \item Almacenamiento en formato intermedio (base de datos) de la información
+    no recogida en anteriores pasadas.
+  \end{enumerate}
+  
+\end{hslide}
+
+%-----------------------%
+
+\begin{hslide}
+  \slsubsect{Analizadores dedicados}
+
+  Especializados sobre fuentes de información que representan
+  una interacción entre usuarios y desarrolladores. Todas ellas mantienen
+  un histórico.
+  
+  \begin{itemize}
+  \item \textbf{Foros web en SourceForge}. Recopila datos de un foro completo.
+    Ojo al HTML \textit{variable}.
+    
+    \textit{Esquema de funcionamiento}:
+    \begin{enumerate}
+    \item Descarga y parsea página de enlaces a hilos [PE]
+      (en principio la inicial) del foro. Se rescatan enlaces a hilos.
+    \item Descarga y examina mensajes de cada hilo de conversación,
+      respetando la jerarquía. Se almacenan los datos obtenidos.
+    \item Tras analizar todos los enlaces de PE, recupera link a
+      siguiente PE.
+    \item Repetir hasta llegar a última página del foro.
+    \end{enumerate}
+
+  \end{itemize}
+
+\end{hslide}
+
+%-----------------------%
+
+\begin{hslide}
+
+  \begin{itemize}
+  \item \textbf{Informes de fallos en Debian}. Analiza la secuencia de mensajes
+    (en formato mbox) que llegan al BTS sobre un determinado error.
+    
+    \textit{Esquema de funcionamiento}:
+    \begin{enumerate}
+    \item Descarga y parsea mensajes de la página del informe. 
+    \item Discrimina mensajes según su destino y examina su
+      contenido en busca de pseudocabeceras, etiquetas, etc.
+    \item Almacena los resultados obtenidos en sendos análisis.
+    \end{enumerate}
+
+  \end{itemize}
+
+\end{hslide}
+
+%-----------------------%
+
+\begin{hslide}
+
+  \begin{itemize}
+  \item \textbf{Listas de correo de Mailman}. Obtiene datos de los archivos
+    generados desde la creación de una lista de correo.
+
+    \textit{Esquema de funcionamiento}:
+    \begin{enumerate}
+    \item Descarga y parsea página de enlaces a archivos.
+    \item Descarga archivo a disco y descomprime.
+    \item Parsea los mensajes del archivo, respetando la jerarquía.
+      Se almacenan los datos obtenidos.
+    \item Volver a (2) hasta que se agoten enlaces a archivos.
+    \end{enumerate}
+
+  \end{itemize}
+
+  \vspace{.4cm}
+
+  \begin{center}
+    \textit{CAPACIDAD DE ACTUALIZACIÓN INCREMENTAL}
+  \end{center}
+
+\end{hslide}
+
+%-----------------------%
+
+\begin{hslide}
+  \slsect{Estructura general}
+
+  \begin{center}
+    \includegraphics[scale=0.28]{estruct.eps}
+  \end{center}
+
+\end{hslide}
+
+%-----------------------%
+
+\begin{hslide}
+  \slsect{Parámetros obtenidos}
+  
+  \begin{itemize}
+  \item Foros web
+
+    \begin{itemize}
+    \item Asociados al emisor: nombre, alias.
+    \item Asociados al mensaje: título, fecha de envío, contenido, identificador
+del mensaje al que responde, etc.
+    \end{itemize}
+
+  \item Listas de correo
+
+    \begin{itemize}
+    \item Asociados al emisor: nombre, dirección de correo.
+    \item Asociados al mensaje: identificador, asunto, fecha de envío, etc.
+    \end{itemize}
+    
+  \item Informes de fallos
+    
+    \begin{itemize}
+    \item Estado del error durante cualquier momento de su existencia:
+      título, versión del paquete, fechas, etiquetas, etc.
+    \item Asociado al mensaje: emisor, receptor, pseudocabeceras, etc.
+    \end{itemize}
+    
+  \end{itemize}
+  
+\end{hslide}
+
+%-----------------------%
+
+\begin{hslide}
+  \slsect{Conclusiones}
+  
+  \begin{itemize}
+  \item Prácticamente todo el trabajo puede ser automatizado.
+  \item Obtener conclusiones \textit{definitivas} requiere de estudios
+    que involucren mayor cantidad de datos y de diferentes fuentes.
+    Ahora disponemos de base en que apoyar futuras herramientas que traten
+    la diversidad de fuentes.
+  \item Resultados obtenidos son almacenados en un formato independiente
+    de herramientas de extracción y análisis.
+  \end{itemize}
+
+\end{hslide}
+
+%-----------------------%
+
+\begin{hslide}
+  \slsect{¿ Alguna pregunta ?}
+\end{hslide}
+
+
+
+\end{document}

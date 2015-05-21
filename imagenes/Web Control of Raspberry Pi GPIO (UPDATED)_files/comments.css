@@ -1,0 +1,50 @@
+#comments-container {margin-bottom:40px}
+#commentsWrapper {margin-top: 30px;}
+
+.comment {background:url(/intl_static/img/comment-gray-fade2.png) no-repeat; border-top:1px solid #e9e9e9; padding:20px 0;background-size: 100%}
+.comment.toplevel {background:url(/intl_static/img/comment-gray-fade1.png) no-repeat;}
+.comment.comment-reply {margin-left: 50px;}
+.comment.highlight {background:url(/intl_static/img/comment-blue-fade2.png) no-repeat; color:#333}
+.comment.toplevel.highlight {background:url(/intl_static/img/comment-blue-fade1.png) no-repeat; background-size:100%}
+.comment .comment-author,
+.comment .comment-date {font-size:13px; color:#999; margin-bottom:7px}
+.comment .comment-txt {margin-left:55px; padding:0 5px 5px 0; overflow:hidden}
+.comment .author-link {font-weight:bold}
+
+.comment-actions {margin:10px 0 0; line-height:22px}
+.comment-actions .action {margin-left:10px}
+.comment-actions a {font-size:12px}
+.comment-actions > .dropdown {line-height:20px}
+
+.post-comment-box {padding:5px; background:#f6f6f6; border:1px solid #e0e0e0}
+.post-comment-box .comment-tip {position:absolute; top:8px; left:-8px; width:9px; height:6px; background:url(/intl_static/img/comment-box-tip.png) no-repeat}
+.post-comment-body {width:90%; position:relative}
+.post-comment-body textarea {padding:4px; width:98%; max-width:98%; height:105px; margin-bottom:5px; border:1px solid #dadada}
+
+.post-comment-toolbar .policy {color:#757575; height:58px;   }/*background:url(/intl_static/img/be-nice.png) no-repeat*/
+.post-comment-toolbar .policy p {margin-top:12px; line-height:16px; display:inline-block;}
+.post-comment-toolbar .policy img {vertical-align: top;}
+
+.post-comment-toolbar .actions {line-height:58px}
+.post-comment-toolbar .actions .btn {margin-left:5px}
+
+.post-comment-body .tooltip-inner {max-width: 100px;}
+.post-comment-body .tooltip {left:-50px!important;top:-60px!important;}
+
+.redactor_redactorAirComment {min-height: 105px; max-height: 600px;}
+
+.comment-imageContainter {width: 98px;display: inline-block;padding: 5px;position: relative;}
+.comment-imageContainter .removeAttachedImg {text-align: center;display: block;}
+.comment-imageContainter .attachedFileLabel {
+    position: absolute;
+    text-align: center;
+    display: block;
+    width: 90%;
+    bottom: 40%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    box-sizing: border-box;
+    padding-right: 10px;
+    padding-left: 5px;
+}

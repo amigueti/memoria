@@ -1,0 +1,16 @@
+#footer { min-width:948px; background-color: #404040; margin-top: 10em;  }
+#footer .container { position: relative}
+#footer-robot { position: absolute; left: -20px; top: -62px; }
+#footer .breadcrumb { background-color: transparent; padding: 0;}
+#footer .breadcrumb > li {text-shadow: 0 1px 0 #333;}
+#footer .breadcrumb a { color: #aaa; }
+#copyright-notice { color: #696969; }
+#footer label { font-size: 150%; color: #fff; text-shadow: 0 1px 0 #333; margin-right: 0.5em;}
+#lang-btn, #footer-search { margin-left:90px; margin-top: 2em; }
+#adsk-logo { margin-left: 20px; }
+#footer .footer-hr { border-top:1.5px solid #323232; border-bottom:1px solid #525252;}
+#jsErrorReportingForm {margin:0}
+
+#legalize_frame { width: 1008px; height: 400px; border: 0px; overflow-x: hidden; overflow-y: auto;}
+#legalModal {width: 1008px;margin-left: -504px;}
+#legalModal div.modal-body {overflow-y: hidden;padding: 0;}

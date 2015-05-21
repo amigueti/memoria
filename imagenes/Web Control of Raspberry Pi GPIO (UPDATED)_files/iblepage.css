@@ -1,0 +1,120 @@
+#instructable-container {vertical-align: top;position: relative;display: inline-block;width:100%;}
+#instructable-content {width: 568px; position: relative;float: left;display: inline-block;}
+#instructable-sidebar {width: 300px;position: relative;top: 0px;float: right;display: inline-block;}
+
+#instructable-wrapper .header-bar {height: 100%;}
+
+#ible-header a {whitespace:nowrap}
+#ible-header .title {font-size:24px; display:inline;font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;}
+#ible-header .author {font-size:13px; margin-left:5px}
+#ible-header .awards-bar {margin-top:-20px}
+#ible-header .awards-bar img {margin-left: 5px}
+#ible-header .stat {margin-right:10px}
+
+#ible-header {position:relative; background-color:transparent}
+#ible-header.fixed {position:fixed; top:0}
+#ible-header-inner {position:relative}
+#ible-header.collapsed:before,
+#ible-header.expanded:before {position:absolute; content:''; bottom:-10px; height:10px; width:1016px; background:url(/intl_static/img/instructable/header-bg.png) repeat-x}
+#ible-header-toggle {display:block; position:absolute; bottom:0px; left:50%; width:50px; height:11px; background:url(/intl_static/img/instructable/header-pulltab.png) no-repeat; cursor:pointer; z-index:1}
+#ible-header.expanded #ible-header-toggle {background-position: 0px 0px}
+#ible-header.expanded:hover #ible-header-toggle {background-position: 0px -21px}
+#ible-header.collapsed #ible-header-toggle {background-position: 0px -42px}
+#ible-header.collapsed:hover #ible-header-toggle {background-position: 0px -63px}
+#ible-header .icomoon {vertical-align: text-top}
+#ible-header-title-row {padding-bottom: 10px;}
+#ible-header .actions-bar .pull-right a {margin-left:5px}
+
+#ible-awards-bar {margin-top:-16px}
+#ible-awards-bar .bg-img {margin-left:10px}
+#ible-awards-bar > img {margin-left:10px; vertical-align:top}
+#ible-awards-bar .vote-dropdown .dropdown-menu {width:270px}
+#ible-awards-bar .vote-dropdown .dropdown-menu.pull-right {right:0; left:auto}
+#ible-awards-bar .vote-dropdown .dropdown-menu.pull-right:before {right:12px; left:auto; border-width:0 14px 7px}
+#ible-awards-bar .vote-dropdown .dropdown-menu.pull-right:after {right:14px; top:-6px; left:auto; border-width:0 12px 6px}
+#ible-awards-bar .vote-dropdown h3 {margin-bottom:10px}
+
+#ible-awards-bar .contests-entered li {margin-bottom:15px}
+#ible-awards-bar .contests-entered li:last-child {margin-bottom:0}
+#ible-awards-bar .contest-entry .contest-image {display:block; width:130px; height:130px; overflow:hidden; float:left; padding:0}
+#ible-awards-bar .contest-entry p {float:left; text-align:center; font-size:11px; line-height:20px; margin:36px 0 0 20px}
+#ible-awards-bar .contest-entry .bg-icon.checkmark {vertical-align:middle}
+
+#ible-steps-nav {background:#f6f6f6; padding:15px 0; border-top:1px solid #dadada; }
+#ible-steps-nav .container:first-child{margin-left:20px;}
+#ible-steps-nav .bubble-tip {top:-15px; width:30px;}
+#ible-steps-nav .btn {margin:0 5px 5px 0}
+#ible-steps-nav .btn:hover,
+#ible-steps-nav .btn.active {background-color:#ea5800; color:#fff; background-position:0 -22px}
+#ible-steps-nav .dropdown-menu {left:-20px; top:170%}
+#ible-steps-nav .dropdown-menu:after {left:25px}
+#ible-steps-nav .dropdown-menu:before {left:24px}
+#ible-steps-nav .dropdown-menu.intro:after {left:34px}
+#ible-steps-nav .dropdown-menu.intro:before {left:33px}
+#ible-steps-nav .step {width:325px; clear:both; padding-bottom:5px}
+#ible-steps-nav .image {float:left}
+#ible-steps-nav .image a {display:block; width:99px; height:99px; overflow:hidden; padding:7px}
+#ible-steps-nav .description {float:right; width:210px; font-size:13px; overflow:hidden}
+#ible-steps-nav .description h4 {margin-bottom:5px}
+#ible-steps-nav .description p {width:200px;font-size:13px;color: #757575;line-height: 14px;}
+#ible-steps-nav.collapsed {display:none}
+#ible-steps-nav.expanded {display:block}
+#ible-steps-nav .dropdown-bubble {position:relative; display:inline-block}
+#ible-steps-nav .dropdown-bubble:hover .dropdown-menu {display:block}
+
+.step-container {text-align: left; padding-bottom:26px; margin-bottom:30px; background:url(/intl_static/img/instructable/step-divider.png) no-repeat center bottom}
+.step-container .step-title {font-size:22px; margin:12px 0}
+.step-body {font-size:16px; line-height:22px}
+.step-body ul {list-style: disc outside none}
+.step-body ol {list-style: decimal outside none}
+.step-body ul, .step-body ol {margin:0 0 9px 25px; padding:0}
+.step-body ul.curly {list-style:none; margin:0px; margin-left:5px; padding-left:1px}
+.step-body iframe, .step-body object, .step-body embed {max-width:100%; border:none}
+.step-body pre {margin-left:0; border:none; background-color:transparent}
+
+#ible-info {position: relative;}
+#ible-info span {font-weight:bold; color:#333;font-size:13px;}
+#ible-info span.count {font-size:18px}
+#ible-info .icon {font-size: 21px; margin:-2px 7px 0 0}
+#ible-info .posted-date{font-size: 13px; line-height: 1em;}
+
+#ible-author-image {width: 85px;}
+#ible-author-byline {padding-left: 5px}
+#ible-author-byline a {display:block;}
+#ible-author-byline .name {color:#333; font-size:16px; font-weight:bold}
+#ible-author-bio {color:#666; font-size: 14px;}
+#ible-author-bio strong {color: black;}
+#ible-author, #ible-author-bio {margin-bottom:12px}
+#ible-author .follow-btn {margin-top: 15px; display:inline-block;}
+#ible-more-by-user img {max-width: 85px; margin: 0 1px 15px 0;}
+
+#ible-tags a {display:inline-block; *display:inline; *zoom: 1; float:left; margin:0 5px 5px 0;}
+#ible-tags .label {position:relative; top:2px; margin-right:5px;}
+#ible-tags span.lbl {top:3px}
+#ible-tags {line-height: 27px;}
+#ible-tags h4 {margin: 3px 8px 0px 0px;}
+
+#related-instructables .related-item {font-size:13px; color:#555; font-weight: normal; line-height: 18px; margin:0 0 10px 2px; position:relative; height:78px; overflow:hidden}
+#related-instructables .related-item .imglink {float:left; display:block; width:75px; height:75px; margin:0 10px 4px 0}
+#related-instructables .related-item .info {margin:0 0 0 85px}
+#related-instructables .related-item a {white-space:normal; color:#333;}
+#related-instructables .related-item a.user {color:#757575}
+#related-instructables .related-item .title {font-weight: bold}
+
+.icon-favorite {color:#c20089}
+.icon-views1 {color:#00a1cf}
+
+.adBlockWrapper {width: 100%; text-align: center; line-height:0; font-size:0}
+.adBlock {width: 300px; min-height:250px; position: relative;top: 0px;float: right; margin: 20px 20px 0px 20px;display: inline-block;}
+
+#steps-pager .pull-right {margin-left:10px}
+#steps-pager .icon-grid {color:#acacac}
+#steps-pager a > .icon-grid:hover {color:#333}
+#allsteps-btn {padding:10px 19px}
+
+.hr-lookalike {background-color: #dddddd;height: 1px;box-shadow: 1px 1px 1px #ffffff;margin-bottom: 13px;}
+.hr-lookalike.vertical {height:auto;width: 1px;margin-bottom: 0em;margin-top: -1em;display:inline-block;bottom: 0px;left: 160px;top: 0px;position:absolute;}
+.breakPadding {margin-left: -1em; margin-right: -1em;}
+.license {margin-bottom: 15px}
+#translation-image {margin:-20px 0px 20px 20px}
+.author-action {display:none}

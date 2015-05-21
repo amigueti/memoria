@@ -1,0 +1,108 @@
+#header-nav-container,
+#header .navbar-inner {
+    background: #f6f6f6;
+    background: -o-linear-gradient(top, #ffffff, #cccccc); 
+    background: -moz-linear-gradient(top, #ffffff, #cccccc); 
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#cccccc)); 
+    filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#FFFFFFFF,EndColorStr=#FFCCCCCC); 
+    -ms-filter: "progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#FFFFFFFF,EndColorStr=#FFCCCCCC)";
+    box-shadow: none;
+}
+
+#header-promo-container {min-height:40px; background-color:#555; text-align:left}
+#header-nav-container,
+#header-promo-container {
+    min-width: 948px;
+}
+  
+#header-promo-container a {color:#fff}
+#header .navbar .brand {padding: 6px 12px 0 0; margin-left:23px}
+#header .navbar .divider-vertical {border-left:1px solid #999}
+#header .nav-collapse .navbar-form {border: none}
+#header .container { position: relative; }
+#header-robot { position: absolute; left: 0; top: 9px; z-index:1}
+#header-search-form { margin: 10px 0 0 10px}
+
+#share-motto { display: block; line-height: 40px;  margin: 0 0 0 72px; font-size: 15px; font-family: 'CompleteInHimPro'; color: #aaa; text-decoration: none; text-shadow: 0 -1px 0 #000 }
+#share-motto a { color: #bbb; text-decoration: none; color: #cbcaca; text-decoration: none; }
+#share-motto a:hover { color: #ddd; }
+#share-motto img { vertical-align: middle }
+
+.dropdownHeaderMenu {margin-top:20px;}
+.dropdownHeaderMenu a {color:#000;text-decoration:none;font-size:13px;outline:none}
+.dropdownHeaderMenu .icon-caret-down{padding:0 0 10px 4px;background-image: none;}
+.dropdownHeaderMenu .dropdown-menu {margin-top:45px;padding: 10px 0;}
+
+#youMenu{display:none}
+#loginMenu{display:none}
+#youMenu img {width:20px;height:20px}
+#youMenu li span {color:#e00;font-weight:700;}
+#myIblesHeaderMenuLink, #logoutHeaderLink {font-weight: 900}
+
+#createModal {width: 750px;margin-left: -375px;height: 430px;overflow: hidden;}
+#createModal h5 {font-size: 16px;}
+#createModal .modal-body {background: #fdeba5 url(/intl_static/img/home-bg.png) repeat-x top;background-size: 1px 370px;border-radius: 0px 0px 5px 5px;height:346px}
+#createModal ul {padding: 0px;margin: 0px;}
+#createModal li {line-height: 40px;list-style: none;}
+#createModal .down-icon {background-image: none;font-size: 28px;vertical-align: middle;line-height: 40px;margin-top: -30px;margin-right: 20px;}
+#createModal .icon-camera {color: #fa4f15;}
+#createModal .icon-idea {color: #f8b222;}
+#createModal .icon-groups {color: #bfd358;}
+#createModal .btn .down-text { text-align: left; width: 100px; margin-left: 48px; font-size: 14px;}
+#createModal .btn .down-text strong { font-size: 15px; }
+#createModal .btn .down-icon-div { text-align: left;width: 40px;float: left;}
+#createModal .btn .down-icon-div .down-icon { font-style: normal; font-size: 38px;}
+#createModal .btn .down-icon-div .down-icon.apple-icon { color: #adadad;}
+#createModal .btn .down-icon-div .down-icon.android-icon { color: #a5c63b; }
+#createModal .deviceImage {max-width: 240px;margin:30px 0 0 30px;display: inline-block;position: relative;vertical-align: top;}
+#createModal .adPromoBlock {margin: 32px 20px;display: inline-block;z-index: 1;position: relative;text-align: left; max-width:375px}
+
+#createCollectionModal {
+    width: 605px;
+}
+#createCollectionModal .modal-header{
+    font-family: Arial, Helvetica, sans-serif;
+}
+#createCollectionModal h3{
+    font-size:18px;
+}
+#createCollectionModal .modal-body{
+    padding:40px;
+}
+#createCollectionModal select{
+    width: 110px;
+    margin-left:10px;
+}
+#createCollectionModal #collection-title {
+    width: 260px;
+    font-size: 16px;
+}
+#createCollectionModal #create-category-dropdown>div{
+    float:left;
+}
+#createCollectionModal .description{
+    width: 100%;
+    height:85px;
+    margin-top: 30px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+#createCollectionModal button .create-spinner {
+    display: none;
+    margin:-3px 5px 0 0;
+}
+#createCollectionModal button.disabled .create-spinner {
+    display:inline-block;
+}
+/*For Webkit browsers (Chrome, Safari) */
+#header-search-form input::-webkit-input-placeholder {font-family: completeinhimpro;padding-top:3px;}
+/* For Mozilla Firefox */
+#header-search-form input::-moz-placeholder {font-family: completeinhimpro;padding-top:3px;}
+#header-search-form input:-moz-placeholder {font-family: completeinhimpro;padding-top:3px;}
+/*For IE*/
+#header-search-form input:-ms-input-placeholder {font-family: completeinhimpro;padding-top:3px;}
+
+.de #header .navbar .nav > li > a {padding: 20px 14px;}
+.loginLink {text-align:right;font-family:"Helvetica"}
+.downloadButtons {margin: 10px 0;}

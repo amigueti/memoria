@@ -1,0 +1,37 @@
+#photoset-overlay {display:block; bottom:0; left:0; right:0; top:0; overflow-x:auto; overflow-y:scroll; position:fixed; z-index:10030;}
+#photoset-overlay .transparency {display:block; position:absolute; cursor:pointer; top:0; bottom:0; left:0; right:0; width:100%; background:#000; opacity:0.8; filter:alpha(opacity=80); -moz-opacity:0.8;}
+
+.photoset {position:relative; text-align:center; background-color:#f6f6f6; border:1px solid #bfbfbf; border:1px solid rgba(0,0,0,0.21); min-height:109px; margin-bottom:35px; padding:22px}
+.photoset:before {content:''; width:568px; height:184px; position:absolute; bottom:-48px; left:-1px; background:url(/intl_static/img/photoset/photoset-bottom-568.jpg) no-repeat center -12px transparent}
+.photoset-item {position:relative; display:inline-block; zoom:1; *display:inline}
+
+.photoset .note-holder {cursor:pointer; color:#333; top:0 !important; left:0 !important;}
+.photoset .notes-icon {background:url(/intl_static/img/imagenotes/icon-notes.png) no-repeat; width:25px; height:25px; display:inline-block; position:absolute; right:0; top:0;}
+.photoset .hidden-item,
+.photoset .hidden-row {display:none}
+
+.photoset-image img {max-width:none; width:100%; height:auto}
+.photoset-video {position:relative; display:block; padding-bottom:56.25%; padding-top:30px; height:0; overflow:hidden}
+.photoset-video iframe,
+.photoset-video object,
+.photoset-video embed {position:absolute; top:0; left:0; width:100%; height:100%}
+
+.photoset-showmore {display:none; position:relative; border:1px solid #ccc; box-shadow: 0 1px 0 0 #828282; height:48px; line-height:38px; font-weight:bold; font-size:14px; color:#333; background:#e0e0e0; background:-webkit-gradient(linear,left top,left bottom,from(#fff),to(#e0e0e0)); background:-moz-linear-gradient(top,#fff,#e0e0e0);}
+.photoset-showmore:hover {background:#e9e9e9; background:-webkit-gradient(linear,left top,left bottom,from(#fff),to(#e9e9e9)); background:-moz-linear-gradient(top,#fff,#e9e9e9); text-decoration:none}
+.photoset-showmore .icon {display:inline-block; width:37px; height:15px; position:relative; top:-20px; background:url(/intl_static/img/photoset/downarrow-sprite.png) no-repeat 0 -10px}
+.photoset-showmore:hover .icon {background-position:0 4px}
+
+.note-holder {cursor:pointer; color:#333; top:0 !important; left:0 !important;}
+.note-holder { position: absolute; background: url(/intl_static/img/imagenotes/transparent.png); }
+.note-border { position: absolute; top: 0; left: 0; z-index: 3; border: 2px solid #fff; border-image: url(/intl_static/img/imagenotes/noteborder.png) 2 2 round; -webkit-border-image: url(/intl_static/img/imagenotes/noteborder.png) 2 2 round; -moz-border-image: url(/intl_static/img/imagenotes/noteborder.png) 2 2 round; -o-border-image: url(/intl_static/img/imagenotes/noteborder.png) 2 2 round; }
+.note-border .note-text { line-height:normal; text-align:left; display: none; background-color: #fff; border: 1px solid #ff0; padding: 0.25em; position: absolute; min-width: 210px}
+.note-text a { float: right; margin: 0; }
+
+.fancybox-image {cursor:pointer;}
+.fancybox-nav {width:20%;}
+.fancybox-nav span {visibility:visible; background:url(/intl_static/img/photoset/photoset-gallery-arrows.png) no-repeat; width:43px; height:70px;}
+.fancybox-prev {left:-120px;}
+.fancybox-prev span {background-position:0 0}
+.fancybox-next {right:-120px;}
+.fancybox-next span {background-position:-54px 0}
+.fancybox-overlay {background-color: rgba(0,0,0,0.6)}
