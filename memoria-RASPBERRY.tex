@@ -177,8 +177,16 @@ Este proyecto intenta introducirse en estos tres mundos. Para ello se ha diseñad
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
 \chapter*{Summary}
-
-FIXME: Resumen en inglés.
+Since their appearance on scene, electronics such as \texttt{Arduino} or \texttt{Raspberry Pi} have completely refefined the attitude of average users to embedded systems. Due to its low price, simplicity and multiple possibilities, this electronics have become a very popular piece among the online community of programmers.
+\newline
+\newline
+There is plenty of informative material about it on the internet about projects or how to get started in our own work: courses, forums, tutorials, etc. Through them you can realize the excitement these technologies produce.
+\newline
+\newline
+Other fancy technologies now a days are 'wireless network sensors' and the 'internet of things'. The first is based on monitoring parameters and then transferring them to the cloud. The second one by providing electronic intelligence to everyday elements of our environment and interconnecting them via the internet.
+\newline
+\newline
+This project attempts to enter these three worlds. We have designed a system that allows the acquisition of data through sensors connected to a  \texttt{Raspberry Pi}. It also provides the system with tools to manipulate other electrical circuits such as relays, motors, etc. All this is presented to the user as an intuitive web application easy to use.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
@@ -252,24 +260,25 @@ Una vez zanjado el objetivo del proyecto es necesario limitar unas metas que nos
 
 \section{Estructura de la memoria}
 \label{sec:estructura}
+Esta memoria está dividida en cuatro capítulos incluyendo este primero introductorio.
 
-FIXME: En esta sección se debería introducir la esctura de la memoria. Así:
-
-\begin{itemize}
-  \item En el primer capítulo se hace una intro al proyecto.
-  
-  \item En el capítulo~\ref{chap:objetivos} se muestran los objetivos del proyecto.
-  
-  \item A continuación se presenta el estado del arte.
-  
-  \item \ldots
-\end{itemize}
-
-
+\begin{enumerate}
+	\item \textit{Introducción}\newline
+	En este primer capítulo hemos explicado el problema, la mativación que nos mueve a abordarlo y los objetivos marcados para su desarrollo.
+	
+	\item \textit{Estado del Arte}\newline
+	A continuación describimos la actualidad de la tecnología usada en el desarrollo de la aplicación y esta misma memoria. Se hace especial hincapié en la descripción de la \texttt{Raspberry Pi} pués es el eje central de todo el proyecto.
+	
+	\item \textit{Implementación y Desarrollo del Proyecto}\newline
+	En este capítulo se describe la aplicación diseñada. Se mencionan los módulos que la componen, su estructura y su funcionamiento. Al final del capítulo se describen un par de aplicaciones desarrollas con las herramientas implementadas.
+	
+	\item \textit{Conclusiones}\newline
+	Al final de esta memoria se encuentran las conclusiones extraidas tanto del proyecto como de la \texttt{Raspberry Pi}. También se hace un repaso de los conocimientos necesarios así como los aprendidos.
+\end{enumerate}
 
 
 \newpage
-\chapter{Estado del arte}
+\chapter{Estado del Arte}
 \section{Raspberry Pi}
 La \texttt{Raspberry Pi} es un mini ordenador del tamaño de una tarjeta de crédito lanzado al mercado el 29 de febrero de 2012. Nace de la fundación británica con el mismo nombre para fomentar la enseñanza de `ciencias de la computación' en escuelas públicas. Aunque no consigue el éxito esperado en este sector, sí que tiene una fantástica acogida en las escuelas privadas y entre los millones de desarrolladores y usuarios de la comunidad online, superando las 2 millones de ventas a comienzo del 2014\footnote{¡Cinco millones en febrero de 2015!}.
 \newline
@@ -329,7 +338,7 @@ Para reducir costes, la \texttt{Raspberry Pi} no incluye un reloj en tiempo real
 %http://es.wikipedia.org/wiki/Arquitectura_ARM
 
 
-\subsection{Raspberry Pi GPIO}
+\subsection{Raspberry Pi GPIO}\label{gpio}
 GPIO es el acrónimo de General Purpose Input/Output pins\footnote{Pines de Propósito General de Entrada/Salida.}. Posiblemente uno de los motivos de mayor éxito de la \texttt{Raspberry Pi}. Esta incluye veintiséis pines de los cuales diecisiete son GPIO. Los pines son el medio por el cual la \texttt{Raspberry} puede conectarse al exterior.
 \newline
 \newline
@@ -466,8 +475,7 @@ Los elementos personalizables de \texttt{Bootstrap} son una combinación de HTML,
 \end{itemize}
 
 \subsection{\LaTeX}
-\LaTeX \space es un sistema de composición de textos de alta calidad. Es un sistema muy diferente a la gran mayoría de editores de texto convencionales del tipo `What You See Is What You Get' o `lo que ves es lo que obtienes'. Se compone de comandos \TeX \space con los que el autor puede elegir el tipo de documento a realizar y no preocuparse tanto por el estilo del mismo. Con ello la
-publicación de textos de alta calidad se vuelve más sencilla.
+\LaTeX \space es un sistema de composición de textos de alta calidad. Es un sistema muy diferente a la gran mayoría de editores de texto convencionales del tipo `What You See Is What You Get' o `lo que ves es lo que obtienes'. Se compone de comandos \TeX \space con los que el autor puede elegir el tipo de documento a realizar y no preocuparse tanto por el estilo del mismo. Con ello la publicación de textos de alta calidad se vuelve más sencilla.
 
 \subsection{Graphviz}
 \texttt{Graphviz} es un software de código abierto el cual permite la visualización de información mediante diagramas, gráficas y otros tipos de representación. Para ello analiza archivos de texto plano determinando la relación entre las estructuras definidos en ellos. 
@@ -848,17 +856,10 @@ Son muchas las dependencias necesarias para la instalación de todos estos elemen
 
 Una vez instaladas todas las piezas del puzle ya contamos con un proyecto completo. Como hemos podido ver, ha sido necesario recrearse en un variado abanico de aplicaciones. Sin embargo ha sido la única solución para desarrollar el trabajo en su conjunto.
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[scale=0.25]{imagenes/raspberry-jaime.jpg}
-    \caption{Raspberry Pi utilizada en este proyecto.}
-	\label{figura:raspberry-utilizada}
-\end{figure}
-
 \section{Aplicaciones Implementadas}
 Ha llegado el momento de realizar alguna implementación que saque partido del proyecto realizado. A continuación se exponen algunos de las aplicaciones desarrolladas:
 
-\subsection{LED y Sensor de Temperatura}
+\subsection{LED y Sensor de Temperatura}\label{subsec:termometro}
 Aunque pueda parecer irrisoria su incorporación en este proyecto, este circuito representa el `Hello World' de la electrónica. No es necesario más que un LED y una resistencia para formar este circuito - la \texttt{Raspberry} actuará como pila e interruptor.
 \newline
 \newline
@@ -903,7 +904,7 @@ Una vez instalados todos los componentes pasamos a crear la aplicación y las tar
 \newline
 Llegados a este punto no nos queda más que dotarle de alguna funcionalidad. En nuestro caso, al realizar una medida superior a 20º C, podemos comprobar como se enciende el LED rojo y apaga el azul, y viceversa si la medida en inferior. Puede parecer una tontería de implementación, sin embargo, ¡estamos ante un sistema muy básico de alerta/alarma!
 
-\subsection{Riego}
+\subsection{Riego}\label{subsec:riego}
 Para finalizar el proyecto se ha decidido implementar un sistema real y útil, que mejore el uso de uno de nuestros recursos naturales más importantes, el agua. Para ello, nos apoyaremos en los datos ambientales registrados por una serie de sensores. Esta información permitirá al sistema consumir una cantidad proporcionada de agua. 
 \newline
 \newline
@@ -997,37 +998,45 @@ Sea como fuere, si quisiéramos desarrollar un producto comercial quizás deberí­a
 
 \section{Aplicación de lo aprendido}
 \label{sec:aplicacion}
-
-FIXME: Aquí viene lo que has aprendido durante el Grado/Máster y que has aplicado
-en el TFG/TFM. Una buena idea es poner las asignaturas más relacionadas y
-comentar en un párrafo los conocimientos y habilidades puestos en práctica.
+Para la realización de este proyecto ha sido necesario aplicar muchos de los conocimientos adquiridos durante los años de estudio universitario. Pero en especial lo aprendido en las siguientes asignaturas:
 
 \begin{enumerate}
-  \item a
-  \item b
+  \item \textit{Electrónica y Sistemas Digitales.}\newline
+  En estas dos asignaturas se dota al alumno del conocimiento básicos de componentes y sistemas digitales a la par que se adquiere experiencia en su manipulación. 
+  
+  \item \textit{Servicios y Aplicaciones en Redes de Ordenadores.}\newline
+  En esta asignatura se enseña lo básico sobre los servicios y aplicaciones comunes en las redes de ordenadores, y en particular en internet \cite{saro}. En ella aprendí a manejar el framework Django que ha permitido realizar en este proyecto la parte del servidor. Así mismo también se enseñan a realizar los \texttt{templates} que componen la vista de la aplicación web y a dotarlos de estilo con la programación \texttt{CSS}.
+  
+  \item \textit{Comunicaciones Sectoriales.}\newline
+  Esta asignatura se imparte en el últiumo semestre de la carrera. Su finalidad no es enseñar al alumno más conocimientos sino darle una imagen práctica de los conocimientos ya adquiridos. Es decir, aquí se presentan diversas tecnologías que se componen de lo aprendido en el grado hasta el momento. Esta asignatura motivó en gran parte este proyecto. 
 \end{enumerate}
 
 
 \section{Lecciones aprendidas}
 \label{sec:lecciones_aprendidas}
-
-FIXME: Aquí viene lo que has aprendido en el Trabajo Fin de Grado/Máster.
+También es necesario hacer mención a lo aprendido durante el desarrollo del proyecto:
 
 \begin{enumerate}
-  \item a
-  \item b
+  \item \textit{Protocolos de Comunicación.}\newline
+  Durante el diseño de los circuitos fue necesarios entender como funcionaban los diversos protocolos de comunicación mencionados en la sección \ref{gpio}.
+  
+  \item \textit{Desarrollo de un Proyecto.}\newline
+  Es importante mencionar que también se ha adquirido experiencia en el desarrollo de un proyecto que auna tantas piezas. Desde su diseño hasta su final implementación se ha tenido que lidiar con multitud de herramientas de distintas índoles. Por lo que fue necesario una planificacíon previa de los pasos a seguir para completar el proyecto.
+  
+  \item \textit{Manejo de \LaTeX.}\newline
+  Para el desarrollo de esta memoria fue fundamental aprender a redactar textos con esta herramienta. Su dificultad radica en el hecho de ser es poco intuitivo. Sin embargo esta dificultad se ve reducida a medida que se va adquiriendo soltura con el mismo.
 \end{enumerate}
 
 
 \section{Trabajos futuros}
 \label{sec:trabajos_futuros}
-
-FIXME: Ningún software se termina, así que aquí vienen ideas y funcionalidades
-que estaría bien tener implementadas en el futuro.
-
-Es un apartado que sirve para dar ideas de cara a futuros TFGs/TFMs.
-
-
+Una vez finalizado el proyecto es posible plantearse una serie de mejoras o extras que podrían dotar a la \texttt{Raspberry Pi} de mayores funciones.
+\newline
+\newline
+Quizás los componentes que mayor juego pueden darle a este proyecto serían los módulos de comunicación. Dotando al sistema de dichos módulos podríamos tener un sistema que no solo se pueda aplicar en un area pequeña, como eran el termómetro \ref{subsec:termometro} o el riego \ref{subsec:riego}, sino en un area de mayor extensión. Así mismo sería interesante añadir la capacidad de mostrar información en displays.
+\newline
+\newline
+En cuanto a mejoras del software cabe mencionar la posiblidad de añadir más herramientas que permitan al usuario realizar distintas acciones con los circuitos y así mismo añadan más funciones a los sistemas implementados. También podría mejorarse la interfaz.
 
 \section{Raspberry}
 Llegados a este punto, justo antes de finalizar la memoria, creo necesario realizar ciertas valoraciones sobre la que ha sido nuestra compañera de trabajo durante todo el proyecto, la \texttt{Raspberry Pi}.
@@ -1103,6 +1112,8 @@ Por tanto debemos concluir que pese a no encontrarnos con un ordenador de gran p
 \bibitem{SimonMonk} Simon Monk. \textit{Programming the \texttt{Raspberry Pi}. Getting Started with Python}. McGraw Hill, 2013.
 \bibitem{MaikSchmidt} Maik Schmidt. \textit{Raspberry Pi A Quick-Start Guide}. The Pragmatic Programers, 2012.
 \bibitem{RPIHAcks} Ruth Suehle y Tom Callaway. \textit{Raspberry Pi Hacks}. O´reilly, 2014.
+\bibitem{saro} Dr. Jesús M. González Barahona, Dr. Gregorio Robles Martínez \textit{Servicios y Aplicaciones en Redes de Ordenadores Grado en Sistemas de Telecomunicación Programa del curso}
+
 \end{thebibliography}
 
 \newpage
